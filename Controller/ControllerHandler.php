@@ -58,7 +58,7 @@ class ControllerHandler
      *
      * @param string $userClass 
      */
-    public function registration($userClass)
+    public function registration($userClass, Request $request)
     {
         $this->userDiscriminator->setClass($userClass);
 
