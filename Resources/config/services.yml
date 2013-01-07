@@ -41,10 +41,6 @@ services:
         arguments: [ "@doctrine" ]
                 
     # alias
-    pugx_user_registration_form_handler:
-        alias: pugx_user.form.handler.registration
-    pugx_user_profile_form_handler:
-        alias: pugx_user.form.handler.profile
     pugx_user_discriminator:
         alias: pugx_user.manager.user_discriminator
     
