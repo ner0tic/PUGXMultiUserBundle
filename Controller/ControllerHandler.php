@@ -68,7 +68,7 @@ class ControllerHandler
         $this->eventDispatcher->dispatch('pugx_multi_user.change_container_value', $event);
         
         $controller = $this->controllerFactory->build('Registration');
-        $return = $controller->registerAction();
+        $return = $controller->registerAction($request);
         
         $this->dispatchManualLogin();
         
