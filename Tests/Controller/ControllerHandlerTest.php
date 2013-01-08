@@ -60,7 +60,8 @@ class ControllerHandlerTest extends \PHPUnit_Framework_TestCase
                 ->with('Registration')
                 ->will($this->returnValue($this->registrationController));
         $this->registrationController->expects($this->exactly(1))->method('registerAction')
-                ->will($this->returnValue($this->response));
+                ->with($this->request)
+		->will($this->returnValue($this->response));
         $this->securityContext->expects($this->exactly(1))->method('getToken')
                 ->will($this->returnValue($this->token));
         $this->token->expects($this->exactly(1))->method('getUser')
